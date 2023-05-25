@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 const url = 'mongodb://127.0.0.1:27017/PRACTICEPORTAL'
-const live_url = 'mongodb+srv://sshubham2405:shubham1234@cluster0.yjekmrn.mongodb.net/admissionportal?retryWrites=true&w=majority'
+const live_url = 'mongodb+srv://prathamsharma4341:pratham1234@cluster0.upelc76.mongodb.net/admission portal?retryWrites=true&w=majority'
 
 const connectDB=()=>{
     return mongoose.connect(live_url)
