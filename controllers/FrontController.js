@@ -19,7 +19,31 @@ class FrontController {
     });
   };
 
- static registration = async (req, res) => {
+  static about = async(req,res)=>{
+    try{
+
+      const { name, email, id, image } = req.user;
+        const about = await UserModel.findOne()
+        //console.log(about)
+        res.render('about',{a:about, n:name , e:email , image:image})
+
+    }catch(error){
+        console.log(error)
+    }
+    
+}
+
+static contact = async(req,res)=>{
+  try {
+    const {name, email,id , image} = req.user;
+    const contact = await UserModel.findOne()
+    res.render('contact',{c:contact, n:name ,  e:email, image:image})
+  } catch (error) {
+    console.log(error)
+  }
+}
+
+  static registration = async (req, res) => {
     try {
       res.render("registration", { message: req.flash("error") });
     } catch (error) {
