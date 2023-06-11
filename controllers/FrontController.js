@@ -19,7 +19,7 @@ class FrontController {
     });
   };
 
-  static registration = async (req, res) => {
+ static registration = async (req, res) => {
     try {
       res.render("registration", { message: req.flash("error") });
     } catch (error) {
